@@ -17,7 +17,6 @@ class TagSerializer(serializers.ModelSerializer):
 
 class CommentSerializer(serializers.ModelSerializer):
     comment_author = UserSerializer(read_only=True)
-
     class Meta:
         model = Comment
         fields = ['id', 'post', 'comment_author', 'comment_content']
@@ -30,7 +29,6 @@ class PostSerializer(serializers.ModelSerializer):
     post_tag_ids = serializers.PrimaryKeyRelatedField(
         source='post_tag', queryset=Tag.objects.all(), many=True, write_only=True, required=False
     )
-
     class Meta:
         model = Post
         fields = ['id', 'post_author', 'post_title', 'post_content', 'post_tag', 'post_tag_ids']
