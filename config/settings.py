@@ -143,5 +143,5 @@ REST_FRAMEWORK = {
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',
     'http://127.0.0.1:5173',
-    'https://blog-week3-frontend.herokuapp.com'
+    'https://blog-week3-frontend-9ead4b73ff93.herokuapp.com'
 ]
